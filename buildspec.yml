@@ -1,1 +1,20 @@
-- ./mvnw clean package -DskipTests
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+
+  build:
+    commands:
+      - echo "Building application..."
+      - chmod +x mvnw
+      - ./mvnw clean package -DskipTests
+
+artifacts:
+  files:
+    - target/*.jar
+
+cache:
+  paths:
+    - /root/.m2/**/*
