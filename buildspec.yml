@@ -9,7 +9,7 @@ phases:
     commands:
       - echo "Building application..."
       - chmod +x mvnw
-      - ./mvnw package
+      - ./mvnw clean package
 
 artifacts:
   files:
